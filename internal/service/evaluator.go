@@ -119,6 +119,10 @@ func Compare(a, b Result) int {
 	}
 
 	for i := 0; i < len(a.Kickers); i++ {
+		if a.Kickers[i] < b.Kickers[i] {
+			return 1
+		}
+
 		if a.Kickers[i] > b.Kickers[i] {
 			return -1
 		}
